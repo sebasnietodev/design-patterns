@@ -1,4 +1,4 @@
-# Problema 3: Patrón Mediator
+# Problema 3
 
 ## Escenario
 Estás desarrollando una aplicación de chat grupal. Los usuarios pueden enviarse mensajes entre sí dentro de una sala de chat. Sin embargo, gestionar las interacciones directas entre cada usuario haría que cada uno deba conocer y comunicarse con todos los demás, lo que resulta en una alta dependencia entre objetos.

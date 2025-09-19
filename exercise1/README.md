@@ -1,4 +1,4 @@
-# Problema 1: Patrón Builder
+# Problema 1
 
 ## Escenario
 Imagina que estás desarrollando una aplicación para una compañía automotriz que permite a los clientes personalizar y ordenar un automóvil. Un objeto Automóvil puede tener muchas configuraciones opcionales: tipo de motor, color, llantas, sistema de sonido, interiores, techo solar, navegación GPS, etc.

@@ -1,4 +1,4 @@
-# Problema 2: Patrón Bridge
+# Problema 2
 
 ## Escenario
 Estás desarrollando una aplicación que gestiona la visualización de notificaciones en diferentes plataformas (por ejemplo: escritorio, móvil, web). Las notificaciones pueden ser de distintos tipos (mensaje, alerta, advertencia, confirmación) y cada tipo puede mostrarse de distintas formas según la plataforma.
