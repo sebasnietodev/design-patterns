@@ -11,3 +11,13 @@ Sin un mediador, cada usuario tendría que mantener referencias directas a todos
 1. **Facilita el mantenimiento**: Agregar o eliminar usuarios no debe requerir modificar los demás.
 2. **Mejor organización**: La lógica de comunicación debe estar centralizada, no dispersa en muchos objetos.
 3. **Reduce la complejidad**: Evitar una red enmarañada de interacciones punto a punto.
+## Patrón de Diseño Utilizado
+
+**Patrón Mediator (Comportamental)**
+
+### Justificación
+El patrón Mediator resuelve el problema de alta dependencia entre usuarios del chat, donde cada usuario tendría que mantener referencias directas a todos los demás. El mediador (GroupChat) centraliza toda la comunicación, eliminando las dependencias directas entre usuarios. Esto simplifica el sistema, facilita agregar/eliminar usuarios sin afectar a otros, y centraliza la lógica de comunicación en un solo lugar, mejorando la mantenibilidad y escalabilidad.
+
+## Diagrama de clases
+
+![alt text](mediator.png)

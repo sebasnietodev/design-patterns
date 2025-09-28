@@ -1,0 +1,42 @@
+@startuml
+interface PlatformImplementation {
+    + showNotification(type: string, message: string): void
+}
+
+class DesktopPlatform implements PlatformImplementation {
+    + showNotification(type: string, message: string): void
+}
+
+class MobilePlatform implements PlatformImplementation {
+    + showNotification(type: string, message: string): void
+}
+
+class WebPlatform implements PlatformImplementation {
+    + showNotification(type: string, message: string): void
+}
+
+abstract class Notification {
+    # platform: PlatformImplementation
+    # message: string
+    + Notification(platform: PlatformImplementation, message: string)
+    + {abstract} send(): void
+}
+
+class AlertNotification extends Notification {
+    + send(): void
+}
+
+class ConfirmationNotification extends Notification {
+    + send(): void
+}
+
+class MessageNotification extends Notification {
+    + send(): void
+}
+
+class WarningNotification extends Notification {
+    + send(): void
+}
+
+Notification *--> PlatformImplementation : composes
+@enduml

@@ -12,3 +12,13 @@ Si usas herencia tradicional, tendrías que crear clases como: NotificacionMensa
 - **Escalabilidad**: Poder agregar nuevas plataformas o tipos de notificación sin modificar el resto del sistema.
 - **Reducción de clases**: Evitar la multiplicación de clases para cada combinación.
 - **Flexibilidad en tiempo de ejecución**: Poder cambiar la plataforma dinámicamente si es necesario.
+## Patrón de Diseño Utilizado
+
+**Patrón Bridge (Estructural)**
+
+### Justificación
+El patrón Bridge es la solución perfecta para evitar la "explosión combinatoria" de clases mencionada en el problema (NotificacionMensajeWeb, NotificacionAlertaMovil, etc.). Separa la abstracción (tipos de notificación) de su implementación (plataformas), permitiendo que ambas jerarquías varíen independientemente. Esto facilita agregar nuevos tipos de notificación o plataformas sin modificar el código existente, siguiendo el principio Abierto/Cerrado.
+
+## Diagrama de clases
+
+![alt text](bridge.png)

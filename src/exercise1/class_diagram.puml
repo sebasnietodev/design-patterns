@@ -1,0 +1,39 @@
+@startuml
+class Car {
+    - engine: string
+    - color: string
+    - wheels: string
+    - soundSystem: string
+    - interior: string
+    - sunroof: boolean
+    - gpsNavigation: boolean
+    + toString(): string
+}
+
+class CarBuilder {
+    - engine: string
+    - color: string
+    - wheels: string
+    - soundSystem: string
+    - interior: string
+    - sunroof: boolean
+    - gpsNavigation: boolean
+    + setEngine(engine: string): CarBuilder
+    + setColor(color: string): CarBuilder
+    + setWheels(wheels: string): CarBuilder
+    + setSoundSystem(soundSystem: string): CarBuilder
+    + setInterior(interior: string): CarBuilder
+    + setSunroof(sunroof: boolean): CarBuilder
+    + setGpsNavigation(gpsNavigation: boolean): CarBuilder
+    + getEngine(): string
+    + getColor(): string
+    + getWheels(): string
+    + getSoundSystem(): string
+    + getInterior(): string
+    + getSunroof(): boolean
+    + getGpsNavigation(): boolean
+    + build(): Car
+}
+
+CarBuilder ..> Car : builds
+@enduml

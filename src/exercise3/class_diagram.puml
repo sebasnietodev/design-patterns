@@ -1,0 +1,27 @@
+@startuml
+interface ChatMediator {
+    + addUser(user: User): void
+    + removeUser(user: User): void
+    + sendMessage(message: string, sender: User): void
+}
+
+class GroupChat implements ChatMediator {
+    - users: User[]
+    + addUser(user: User): void
+    + removeUser(user: User): void
+    + sendMessage(message: string, sender: User): void
+    + getUsers(): User[]
+}
+
+class User {
+    - name: string
+    - mediator: ChatMediator
+    + User(name: string, mediator: ChatMediator)
+    + getName(): string
+    + sendMessage(message: string): void
+    + receiveMessage(message: string, sender: string): void
+}
+
+User --> ChatMediator : uses
+GroupChat o--> User : aggregates
+@enduml
